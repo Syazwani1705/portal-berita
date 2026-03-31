@@ -1,0 +1,268 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", sans-serif;
+    background: linear-gradient(180deg, #e7ebed, #3e4c63);
+    color: #111827;
+}
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    width: 100%;
+}
+
+
+@media (min-width: 600px) {
+    .col-m-5 { width: 41.66%; }
+    .col-m-7 { width: 58.33%; }
+}
+
+
+@media (min-width: 768px) {
+    .col-3 { width: 25%; }
+    .col-9 { width: 75%; }
+}
+
+
+#wrap {
+    width: 90%;
+    margin: 40px auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 25px 40px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+
+#header {
+    height: 140px;
+    background: linear-gradient(135deg, #334155, #475569);
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+
+#header h1 {
+    color: #f8fafc;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#silebar {
+    background: #f8fafc;
+    border-radius: 14px;
+    border: 1px solid #627496;
+}
+
+#judul_silebar {
+    padding: 14px;
+    text-align: center;
+    font-weight: 600;
+    background: #62708c;
+    color: #ffffff;
+    border-radius: 14px 14px 0 0;
+}
+
+#isi_silebar ul {
+    list-style: none;
+}
+
+#silebar a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #0c1625;
+    transition: all 0.25s ease;
+}
+
+#silebar a:hover {
+    background: #e5e7eb;
+    padding-left: 22px;
+}
+
+
+#konten {
+    background: linear-gradient(180deg, #ffffff, #f8fafc);
+    border-radius: 16px;
+    border: 2px solid #e0e7ff;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(99,102,241,0.08);
+}
+
+
+#konten h1 {
+    margin-bottom: 16px;
+    color: #1e293b;
+    padding: 12px 18px;
+    background: linear-gradient(135deg, #9facd6, #c7d2fe);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+#footer {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #e5e7eb;
+    padding: 50px 40px 20px;
+    border-radius: 0 0 16px 16px;
+}
+
+
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+
+.footer-col h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f8fafc;
+    position: relative;
+}
+
+.footer-col h3::after {
+    content: "";
+    width: 40px;
+    height: 3px;
+    background: #f59e0b;
+    display: block;
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+.footer-col ul {
+    padding: 0;
+}
+
+.footer-col ul li {
+    padding: 6px 0;
+    font-size: 14px;
+    color: #cbd5f5;
+}
+
+.footer-col ul li:hover {
+    color: #fbbf24;
+    transform: translateX(10px);
+}
+
+
+.footer-bottom {
+    text-align: center;
+    font-size: 13px;
+    color: #9ca3af;
+    border-top: 1px solid rgb(255, 255, 255);
+    padding-top: 15px;
+}
+
+.tanggal {
+    font-size: 14px;
+    color: #9da0a7;
+    margin-bottom: 15px;
+}
+
+#konten p {
+    line-height: 1.8;
+    text-align: justify;
+}
+
+
+.card {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+
+.card.berita {
+    border-left: 5px solid #6366f1;
+    background: #eef2ff;
+}
+
+.card ul {
+    margin: 10px 0 0;
+    padding-left: 20px;
+}
+.berita {
+    transition: all 0.25s ease;
+}
+
+.berita:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+}
+
+.btn-baca {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 14px;
+    font-size: 13px;
+    text-decoration: none;
+    background: #6366f1;
+    color: white;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.btn-baca:hover {
+    background: #4f46e5;
+}
+
+
+
+.card.agenda {
+    border-left: 5px solid #10b981; 
+    background: #f0fdf4;
+}
+
+.card.agenda h3 {
+    color: #065f46;
+}
+
+.card.agenda .tanggal {
+    color: #047857;
+    font-weight: 500;
+}
+
+.card.agenda ul li {
+    margin-bottom: 4px;
+}
+
+
+.auth-nav {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+.auth-nav a {
+    margin: 0 6px;
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.auth-nav a.active {
+    color: #6366f1;
+    font-weight: 700;
+}
+
+.auth-nav a:hover {
+    color: #4f46e5;
+}
